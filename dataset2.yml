@@ -1,0 +1,28 @@
+type: intent
+name: addTask
+utterances: 
+  - add a task due [date:snips/datetime](tomorrow at 10am) and assign it to [employee:employee](Hamza Boudouche)
+  - insert a new task in trello for [employee:employee](Soufiane Boujida) due [date:snips/datetime](next week)
+  - create a new task for [employee:employee](Amal Derouich) with the deadline [date:snips/datetime](monday at 1pm) 
+  - can you add a task due [date:snips/datetime](next friday) and assign it to [employee:employee](hamza boudouche)
+  - create a task due [date:snips/datetime](today at 10am) for [employee:employee](hamza bouduche)
+
+---
+type: intent
+name: getTasks
+utterances: 
+  - get me all tasks due before [date:snips/datetime](tomorrow at 10am)
+  - show tasks due before [date:snips/datetime](next monday) for [employee:employee](Hamza Boudouche)
+  - look for the tasks assigned to [employee:employee](Hamza Boudouche) that are due before [date:snips/datetime](next monday)
+  - what are the tasks that [employee:employee](Hamza Boudouche) has, and that are due for [date:snips/datetime](next monday)
+
+---
+type: entity
+name: employee
+# automatically_extensible: false
+values: 
+  - [hamza boudouche, boudouche hamza, hamza]
+  - [amal derouich, derouich amal]
+  - [soufiane boujida, boujida soufiane]
+  - [oussama bouzekraoui, bouzekraoui oussama]
+  - [wissal akki, akki wissal]

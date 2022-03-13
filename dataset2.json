@@ -1,0 +1,226 @@
+{
+  "entities": {
+    "employee": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [
+            "boudouche hamza",
+            "hamza"
+          ],
+          "value": "hamza boudouche"
+        },
+        {
+          "synonyms": [
+            "derouich amal"
+          ],
+          "value": "amal derouich"
+        },
+        {
+          "synonyms": [
+            "boujida soufiane"
+          ],
+          "value": "soufiane boujida"
+        },
+        {
+          "synonyms": [
+            "bouzekraoui oussama"
+          ],
+          "value": "oussama bouzekraoui"
+        },
+        {
+          "synonyms": [
+            "akki wissal"
+          ],
+          "value": "wissal akki"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "snips/datetime": {}
+  },
+  "intents": {
+    "addTask": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "add a task due "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "tomorrow at 10am"
+            },
+            {
+              "text": " and assign it to "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Hamza Boudouche"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "insert a new task in trello for "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Soufiane Boujida"
+            },
+            {
+              "text": " due "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "next week"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "create a new task for "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Amal Derouich"
+            },
+            {
+              "text": " with the deadline "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "monday at 1pm"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "can you add a task due "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "next friday"
+            },
+            {
+              "text": " and assign it to "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "hamza boudouche"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "create a task due "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "today at 10am"
+            },
+            {
+              "text": " for "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "hamza bouduche"
+            }
+          ]
+        }
+      ]
+    },
+    "getTasks": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "get me all tasks due before "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "tomorrow at 10am"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show tasks due before "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "next monday"
+            },
+            {
+              "text": " for "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Hamza Boudouche"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "look for the tasks assigned to "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Hamza Boudouche"
+            },
+            {
+              "text": " that are due before "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "next monday"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what are the tasks that "
+            },
+            {
+              "entity": "employee",
+              "slot_name": "employee",
+              "text": "Hamza Boudouche"
+            },
+            {
+              "text": " has, and that are due for "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "next monday"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}
